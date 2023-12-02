@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import BgChanger from "./BgChanger";
+import Counter from "./Counter";
+import InputBox from "./InputBox";
+import Password from "./Password";
+import Tailwind from "./Tailwind";
 
 function App() {
+  const[amount, setAmount] = useState(0);
+  const[from, setFrom] = useState('usd');
+  const[to, setTo] = useState('inr');
+  const[convertedAmount, setconvertedAmount] = useState(0);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/* <h1>React Basic</h1>
+    <Counter/>
+    <Tailwind/> 
+    <BgChanger/> */}
+    {/* <Password/> */}
+    <InputBox/>
+    </>
   );
 }
 
